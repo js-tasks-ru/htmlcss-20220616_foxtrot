@@ -4,12 +4,6 @@
   --vantablack: #000;
 }
 
-.accordion {
-  padding: 0.5rem;
-  max-width: 730px;
-  margin: auto;
-}
-
 .accordion * {
   line-height: 1.5rem;
   font-weight: 400;
