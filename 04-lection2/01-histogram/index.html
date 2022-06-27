@@ -2,10 +2,41 @@
 <!-- Страница с гистограммой -->
 <html lang="ru">
     <head>
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./histogram.css">
     </head>
     <body>
-
+        <div class="histogram">
+            <div class="histogram__header">
+                <div class="histogram__counter">
+                    <p class="histogram__title">Total orders</p>
+                    <p class="histogram__count">50123</p>
+                </div>
+                <a class="histogram__link" href="#">View all</a>
+            </div>
+            <div class="histogram__content">
+                <div class="histogram__col" style="height: 15px"></div>
+                <div class="histogram__col" style="height: 50px"></div>
+            </div>
+        </div>
     </body>
+
+    <script>
+        // маленький скрипт, чтобы руками эти гистограммы не рисовать
+        const generateHistogram = (colNumber) => {
+            const targetDiv = document.getElementsByClassName('histogram__content')[0];
+            const content = [...Array(colNumber).values()].reduce((accum, element) => { 
+                const value = Math.round(Math.random() * 10 + 1);
+                accum += `<div class="histogram__col" style="height: calc(5px * ${value});"></div>`;
+                return accum;
+            }, []);
+            targetDiv.innerHTML = content;
+        }
+
+        window.onload = function() {
+            generateHistogram(40);
+        }
+    </script>
+
 </html>
