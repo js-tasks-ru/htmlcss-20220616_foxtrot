@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="./assets/css/normalize.css">
         <link rel="stylesheet" href="./assets/css/main.css">
         <link rel="stylesheet" href="./assets/css/index.css">
+        <link rel="stylesheet" href="./04-lection2/01-histogram/histogram.css">
     </head>
     <body>
         <header class="header">
@@ -31,7 +32,21 @@
                     <div class="preview-card__label"><span>Modal dialog</span></div>
                 </div>
                  <div class="preview-card">
-                    <div class="preview-card__preview"></div>
+                    <div class="preview-card__preview">
+                        <div class="histogram">
+                            <div class="histogram__header">
+                                <div class="histogram__counter">
+                                    <p class="histogram__title">Total orders</p>
+                                    <p class="histogram__count">50123</p>
+                                </div>
+                                <a class="histogram__link" href="#">View all</a>
+                            </div>
+                            <div class="histogram__content">
+                                <div class="histogram__col" style="height: 15px"></div>
+                                <div class="histogram__col" style="height: 50px"></div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="preview-card__label"><span>Histogram</span></div>
                 </div>
                  <div class="preview-card">
@@ -50,4 +65,23 @@
             </div>
         </footer>
     </body>
+
+    
+    <script>
+        // маленький скрипт, чтобы руками эти гистограммы не рисовать
+        const generateHistogram = (colNumber) => {
+            const targetDiv = document.getElementsByClassName('histogram__content')[0];
+            const content = [...Array(colNumber).values()].reduce((accum, element) => { 
+                const value = Math.round(Math.random() * 10 + 1);
+                accum += `<div class="histogram__col" style="height: calc(5px * ${value});"></div>`;
+                return accum;
+            }, []);
+            targetDiv.innerHTML = content;
+        }
+
+        window.onload = function() {
+            generateHistogram(20);
+        }
+    </script>
+
 </html>
