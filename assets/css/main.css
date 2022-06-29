@@ -11,12 +11,14 @@
     --grey-2: #DDE2E5;
     --grey-3: #ACB5BD;
     --grey-4: #495057;
+    --grey-5: #90a0b7;
 
     --error: var(--red);
     --success: var(--blue);
 
     --primary: var(--blue);
     --secondary: var(--purple);
+    --header: rgba(51, 77, 110, 1);
 }
 
 * {
