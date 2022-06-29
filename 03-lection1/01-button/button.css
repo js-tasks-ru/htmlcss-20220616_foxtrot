@@ -1,16 +1,3 @@
-/* Стилизация кнопки */
-
-/*
-во избежание merge conflict сделал так. 
-не очень ясно, как сделать darken другими средствами
-и получить те же цвета как в макете
-*/
-
-:root {
-  --primary-darken: #2342C0;
-  --secondary-darken: #5028C6;
-}
-
 .button {
   height: 3rem;
   min-width: 189px;
