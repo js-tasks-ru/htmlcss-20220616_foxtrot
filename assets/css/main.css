@@ -17,8 +17,6 @@
 
     --primary: var(--blue);
     --secondary: var(--purple);
-    --primary-darken: #2342C0;
-    --secondary-darken: #5028C6;
 }
 
 body {
