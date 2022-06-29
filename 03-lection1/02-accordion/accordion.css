@@ -1,10 +1,4 @@
-/* Стилизация аккордеона */
-
-:root {
-  --vantablack: #000;
-}
-
-.accordion * {
+.accordion {
   line-height: 1.5rem;
   font-weight: 400;
   font-family: 'Inter', sans-serif;
