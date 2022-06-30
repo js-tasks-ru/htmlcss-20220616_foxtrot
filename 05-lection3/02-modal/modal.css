@@ -27,6 +27,7 @@
   padding: 30px 40px;
   border-radius: 8px;
   background-color: var(--white);
+  font-family: Inter, sans-serif;
   line-height: 24px;
   z-index: 5;
 }
