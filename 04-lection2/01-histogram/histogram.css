@@ -1,10 +1,8 @@
 .histogram {
-  height: 185px;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
-  flex-basis: 100%;
-  justify-content: space-between;
   box-sizing: border-box;
+  height: 100%;
   background: var(--white);
   padding: 1rem 1.5rem 1.5rem 1.5rem;
   border: 1px solid var(--grey-3);
@@ -43,14 +41,15 @@
 }
 
 .histogram__content {
+  height: 100%;
   display: flex;
   gap: 1px;
   align-items: flex-end;
+  margin-top: 39px;
 }
 
 .histogram__col {
-  flex-basis: 100%;
-  min-height: 5px;
-  max-height: 50px;
+  width: 9px;
+  flex-grow: 1;
   background-color: var(--primary);
 }
