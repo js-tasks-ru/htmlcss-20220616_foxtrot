@@ -9,9 +9,6 @@
   padding: 1rem 1.5rem 1.5rem 1.5rem;
   border: 1px solid var(--grey-3);
   border-radius: .5rem; 
-}
-
-.histogram * {
   font-family: 'Inter', sans-serif;
 }
 
