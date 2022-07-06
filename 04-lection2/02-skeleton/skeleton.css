@@ -55,3 +55,11 @@
     0%{background-position:0% 50%}
     100%{background-position:150% 50%}
 } */
+
+.skeleton__row_short {
+  max-width: 40%;
+}
+
+.skeleton__row_not-so-short {
+  max-width: 60%
+}
