@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./histogram.css">
     </head>
-    <body>
+    <body style="height: 400px;">
         <div class="histogram">
             <div class="histogram__header">
                 <div class="histogram__counter">
@@ -16,8 +16,8 @@
                 <a class="histogram__link" href="#">View all</a>
             </div>
             <div class="histogram__content">
-                <div class="histogram__col" style="height: 15px"></div>
-                <div class="histogram__col" style="height: 50px"></div>
+                <div class="histogram__col" style="height: 50%"></div>
+                <div class="histogram__col" style="height: 100%"></div>
             </div>
         </div>
     </body>
@@ -27,8 +27,8 @@
         const generateHistogram = (colNumber) => {
             const targetDiv = document.getElementsByClassName('histogram__content')[0];
             const content = [...Array(colNumber).values()].reduce((accum, element) => { 
-                const value = Math.round(Math.random() * 10 + 1);
-                accum += `<div class="histogram__col" style="height: calc(5px * ${value});"></div>`;
+                const value = Math.round(Math.random() * 10);
+                accum += `<div class="histogram__col" style="height: calc(10% * ${value});"></div>`;
                 return accum;
             }, []);
             targetDiv.innerHTML = content;
