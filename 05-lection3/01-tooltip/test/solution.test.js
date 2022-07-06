@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
 
-describe('lection2/skeleton', () => {
-  it('Скелетон', () => {
+describe('lection3/tooltip', () => {
+  it('Тултип', () => {
     expect(1).to.equal(1);
   });
 });
