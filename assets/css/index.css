@@ -1,4 +1,4 @@
-.header *, .content *, .footer * {
+.header, .content, .footer {
   font-family: Inter, sans-serif;
   color: var(--black);
 }
