@@ -3,16 +3,35 @@
 <html lang="ru">
     <head>
         <link rel="stylesheet" href="../../assets/css/main.css">
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
         <link rel="stylesheet" href="./accordion.css">
     </head>
     <body>
-        <details>
-            <summary>
-                Accordion item
-            </summary>
-            <p>
-                Hidden content
-            </p>
-        </details>
+        <div class="accordion">
+            <details class="accordion__row" open>
+                <summary class="accordion__summary">
+                    Accordion item 1
+                </summary>
+                <p class="accordion__content">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit pariatur ut, exercitationem earum et doloremque reiciendis ex, modi commodi voluptas consectetur. Nemo hic iusto perferendis id explicabo rem ratione aut!
+                </p>
+            </details>
+            <details class="accordion__row">
+                <summary class="accordion__summary">
+                    Accordion item 2
+                </summary>
+                <p class="accordion__content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, fugit porro.
+                </p>
+            </details>
+            <details class="accordion__row">
+                <summary class="accordion__summary">
+                    Accordion item 3
+                </summary>
+                <p class="accordion__content">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus in dolores aliquid cum perferendis, corporis, quo, quos unde perspiciatis impedit odit nemo id expedita? Iusto?
+                </p>
+            </details>
+        </div>
     </body>
 </html>
