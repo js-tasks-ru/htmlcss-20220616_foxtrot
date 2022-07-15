@@ -2,11 +2,60 @@
 <!-- Страница с календарем -->
 <html lang="ru">
     <head>
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
+        <link rel="stylesheet" href="../../assets/fonts/fonts.css">
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./calendar.css">
         <title>Calendar</title>
     </head>
     <body>
-
+        <div class="calendar">
+            <div class="calendar__title">November 2020</div>
+            <div class="calendar__grid">
+                <!-- это пример содержимого. итоговое содержимое генерится скриптом -->
+                <div class="calendar__weekday"></div>
+                <div class="calendar__weekday"></div>
+                <div class="calendar__weekday"></div>
+                <div class="calendar__weekday"></div>
+                <div class="calendar__weekday"></div>
+                <div class="calendar__weekday"></div>
+                <div class="calendar__weekday"></div>
+                <div class="calendar__day"></div>
+                <div class="calendar__day calendar__day_range"></div>
+                <div class="calendar__day calendar__day_range"></div>
+                <div class="calendar__day calendar__day_range"></div>
+                <div class="calendar__day calendar__day_range"></div>
+                <div class="calendar__day"></div>
+                <div class="calendar__day"></div>
+            </div>
+        </div>
     </body>
+
+    <script>
+        // опять же, чтобы руками не рисовать
+        const generateMonth = (daysCount=30, offset=1) => {
+            const weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+            const cal = document.getElementsByClassName('calendar__grid')[0];
+            const titleDays = weekDays.map(d => `<div class="calendar__weekday"><span>${d}</span></div>`)
+            const offsetDays = [...Array(offset).values()].map(e => '<div class="calendar__day"></div>');
+            const calDays = [...Array(daysCount).values()].map((e, idx) => {
+                let className = 'calendar__day';
+                // выделенный интервал
+                if (idx === 17 || idx === 21) {
+                    className += ' calendar__day_range-border';
+                }
+                if (17 < idx && idx < 21) {
+                   className += ' calendar__day_range';
+                }
+                return `<div class="${className}"><span>${idx + 1}</span></div>`;
+            });
+            cal.innerHTML = titleDays.concat(offsetDays).concat(calDays).join('');
+            return cal;
+        }
+
+        window.onload = function () {
+            // generateMonth(31, 6);
+            generateMonth();
+        }
+    </script>
 </html>
